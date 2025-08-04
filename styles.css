@@ -1,0 +1,546 @@
+:root {
+    --peach: #ffd8c9;
+    --light-peach: #ffebe2;
+    --yellow: #fff3cd;
+    --white: #ffffff;
+    --text-color: #333333;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-peach);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+header {
+    background-color: var(--peach);
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    color: var(--text-color);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #d6336c;
+}
+
+main {
+    padding: 30px 0;
+    min-height: 70vh;
+}
+
+footer {
+    background-color: var(--peach);
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Стили для карточек */
+.about-card, .contacts-card, .pricing-card {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.about-card h3, .contacts-card h3, .pricing-card h3 {
+    color: #d6336c;
+    margin-top: 0;
+}
+
+/* Стили для формы */
+.booking-form {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    min-height: 100px;
+}
+
+button[type="submit"] {
+    background-color: var(--peach);
+    color: var(--text-color);
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #f5b7b1;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* Герой-секция */
+.hero {
+    background: linear-gradient(135deg, var(--peach) 0%, var(--yellow) 100%);
+    padding: 60px 0;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #d6336c;
+}
+
+.highlight {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: var(--yellow);
+    border-radius: 20px;
+}
+
+/* Преимущества */
+.benefits {
+    margin: 50px 0;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.benefit-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-card h3 {
+    color: #d6336c;
+    margin-top: 0;
+}
+
+/* Отзыв */
+.testimonial {
+    background-color: var(--yellow);
+    padding: 40px;
+    border-radius: 8px;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.testimonial blockquote {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.testimonial footer {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* CTA секция */
+.cta-section {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.cta-button, .cta-button-primary, .cta-button-secondary {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.cta-button, .cta-button-primary {
+    background-color: #d6336c;
+    color: white;
+}
+
+.cta-button-secondary {
+    background-color: white;
+    color: #d6336c;
+    border: 2px solid #d6336c;
+}
+
+.cta-button:hover, .cta-button-primary:hover {
+    background-color: #b02a5b;
+    transform: translateY(-2px);
+}
+
+.cta-button-secondary:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+}
+main.container {
+    padding: 0; /* Убираем стандартные отступы */
+    margin: 0 auto; /* Центрируем контент */
+    max-width: 1200px; /* Ограничиваем ширину */
+}
+
+.intro-section {
+    padding: 60px 0; /* Отступы только для секций */
+}
+/* Добавьте этот селектор для активных ссылок */
+.nav-link.active {
+    color: var(--accent);
+    font-weight: bold;
+}
+.nav-link.active:after {
+    width: 100%;
+}
+/* Креативные стили */
+:root {
+    --peach: #FF9E80;
+    --light-peach: #FFD8C9;
+    --yellow: #FFEE58;
+    --white: #FFFFFF;
+    --dark: #333333;
+    --accent: #FF5252;
+    --light-bg: #FFF8F5;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark);
+    background-color: var(--light-bg);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.creative-header {
+    background: var(--white);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    padding: 20px 0;
+    position: relative;
+    z-index: 100;
+}
+
+.header-content {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin: 0;
+    color: var(--dark);
+}
+
+.highlight-word {
+    color: var(--accent);
+}
+
+.tagline {
+    font-style: italic;
+    margin: 5px 0 0;
+    color: #666;
+}
+
+/* Навигация */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    gap: 25px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-link.active {
+    color: var(--accent);
+}
+
+.nav-link:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s;
+}
+
+.nav-link:hover:after {
+    width: 100%;
+}
+
+.nav-button {
+    background: var(--accent);
+    color: white!important;
+    padding: 8px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.nav-button:hover {
+    background: #E04040;
+    transform: translateY(-2px);
+}
+
+/* Основной контент */
+.creative-main {
+    padding: 40px 0;
+}
+
+.intro-section {
+    padding: 60px 0;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.intro-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.text-rotate {
+    color: var(--accent);
+    display: inline-block;
+    min-width: 120px;
+}
+
+.lead {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Стили для главной страницы */
+.hero-section {
+    background: linear-gradient(135deg, var(--peach), var(--yellow));
+    padding: 80px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-text {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+/* Секция преимуществ */
+.benefits {
+    padding: 60px 0;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.benefit-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Секция "О преподавателе" */
+.about-preview {
+    padding: 60px 0;
+    background: var(--light-peach);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 900px;
+    margin: 40px auto 0;
+}
+
+.teacher-photo {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Стили для секции быстрой записи */
+.booking-section {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.booking-section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #343a40;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group input,
+.form-group select {
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    background-color: #6c63ff;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #5a52d3;
+}
+
+.message {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 4px;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+/* Остальные стили для feature-секций и футера */
+:root {
+  --primary: #FFD1DC; /* Розовый */
+  --secondary: #E0F7FA; /* Мятный */
+  --accent: #FFAB91; /* Персиковый */
+  --text: #5D4037; /* Текст */
+  --bg: #FFF9FB; /* Фон */
+}
+
+body {
+  background: var(--bg);
+  transition: opacity 0.3s; /* Для плавных переходов */
+}
+
+/* Параллакс-эффект */
+.hero {
+  background-attachment: fixed;
+}
